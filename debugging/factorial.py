@@ -9,17 +9,15 @@ def factorial(n):
 
     while n > 1:
 
-        result *= n
+        result = result * n
 
-        n -= 1 
+        n = n - 1
 
     return result
 
 
-if __name__ == "__main__":
+if len(sys.argv) > 1:
 
-    if len(sys.argv) > 1:
+    f = factorial(int(sys.argv[1]))
 
-        f = factorial(int(sys.argv[1]))
-
-        print(f)
+    print(f)
